@@ -113,7 +113,7 @@
 const ticker = document.getElementById('ticker');
 
 // GitHubからJSONを取得（キャッシュ防止クエリ付き）
-fetch('https://github.com/hain-sspc/SSPC/blob/main/data.json' + new Date().getTime())
+fetch('https://raw.githubusercontent.com/hain-sspc/SSPC/main/data.json?t=' + new Date().getTime())
   .then(response => response.json())
   .then(data => {
     // announcements 配列からテキストを連結
