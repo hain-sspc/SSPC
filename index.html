@@ -109,4 +109,21 @@
   </div>
 
 </body>
+  <script>
+const ticker = document.getElementById('ticker');
+
+// GitHubからJSONを取得（キャッシュ防止クエリ付き）
+fetch('https://raw.githubusercontent.com/【ユーザー名】/【リポジトリ名】/main/data/announcements.json?t=' + new Date().getTime())
+  .then(response => response.json())
+  .then(data => {
+    // announcements 配列からテキストを連結
+    const text = data.announcements.map(a => a.message).join('　|　');
+    ticker.textContent = text;
+  })
+  .catch(error => {
+    console.error('アナウンスの取得に失敗しました:', error);
+    ticker.textContent = '現在アナウンスはありません';
+  });
+</script>
+
 </html>
