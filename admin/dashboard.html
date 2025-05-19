@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>管理ページ</title>
+</head>
+<body>
+  <h1>アナウンス管理</h1>
+  <div id="formArea"></div>
+  <button onclick="addField()">＋追加</button>
+  <button onclick="saveChanges()">💾 保存</button>
+  <p id="status"></p>
+
+  <script>
+    const token = "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"; // GitHub Personal Access Token
+    const repo = "hain-sspc/SSPC";
+    const path = "data.json";
+    const apiUrl = `https://api.github.com/repos/SSPC/contents/data.json`;
+    let sha = "";
+
+    fetch(apiUrl, {
+      headers: { Authorization: `token ${token}` }
+    })
+      .then(res => res.json())
+      .then(data => {
+        sha = data.sha;
+        const json = JSON.parse(atob(data.content));
+        loadForm(json.announcements);
+      });
+
+    function loadForm(announcements) {
+      const area = document.getElementById("formArea");
+      announcements.forEach((ann, index) => {
+        const input = document.createElement("input");
+        input.value = ann.message;
+        input.id = `msg${index}`;
+        input.style.width = "80%";
+        area.appendChild(input);
+        area.appendChild(document.createElement("br"));
+      });
+    }
+
+    function addField() {
+      const area = document.getElementById("formArea");
+      const count = area.querySelectorAll("input").length;
+      const input = document.createElement("input");
+      input.id = `msg${count}`;
+      input.style.width = "80%";
+      area.appendChild(input);
+      area.appendChild(document.createElement("br"));
+    }
+
+    async function saveChanges() {
+      const inputs = document.querySelectorAll("input");
+      const announcements = Array.from(inputs).map(input => ({
+        message: input.value
+      }));
+      const content = btoa(JSON.stringify({ announcements }, null, 2));
+
+      const result = await fetch(apiUrl, {
+        method: "PUT",
+        headers: {
+          Authorization: `token ${token}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          message: "Update data.json",
+          content,
+          sha
+        })
+      });
+
+      if (result.ok) {
+        document.getElementById("status").textContent = "✅ 更新しました";
+      } else {
+        document.getElementById("status").textContent = "❌ エラーが発生しました";
+      }
+    }
+  </script>
+</body>
+</html>
