@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>草餅過激派連合軍|SSPC</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>草餅過激派連合軍 | SSPC</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://i.imgur.com/uQTZqNL.png" alt="Logo">
+<header>
+  <img src="https://i.imgur.com/uQTZqNL.png" alt="Logo" class="logo" />
+  <div>
+    <a href="https://discord.gg/y5ymW6YDf3" target="_blank">Discord</a>
+    <a href="https://w.atwiki.jp/sspc/" target="_blank">Wiki</a>
+  </div>
+</header>
+
+<div id="ticker-container">
+  <div id="ticker">読み込み中...</div>
+</div>
+
+<main>
+  <section id="top">
+    <div class="top-wrapper">
+      <div class="banner-title">
+        <h1>草餅過激派連合軍公式サイト</h1>
       </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="https://discord.gg/y5ymW6YDf3" target="_blank">discord</a>
-        <a href="https://w.atwiki.jp/sspc/" target="_blank">wiki</a>
-      </div>
+      <p>草餅過激派連合軍に入って荒らしを学ぶ</p>
     </div>
-  </header>
+  </section>
 
-<div class="top-wrapper">
-  <div class="banner-title">
-    <h1>草餅過激派連合軍公式サイト</h1>
-  </div>
-  <div class="container">
-    <p>草餅過激派連合軍に入って荒らしを学ぶ</p>
-  </div>
-</div>
-
-
-</div>
-  <div class="content">
-    <!-- コンテンツを追加 -->
-    <section class="history">
-  <div class="container">
+  <section id="history">
     <h2>草餅過激派連合軍の歴史</h2>
-  <li> 8月9日　ハイレモン鯖(後の草餅コミュニティー)ができる。
-<li>8月　オケラが管理者になる。　
+    <ul>
+      <li>8月9日 ハイレモン鯖ができる</li>
+      <li>8月　オケラが管理者になる。　
 <li>9月　草餅コミュニティーとなる。
 <li>9月　上にうぇーい、!pollが管理者になる。
 <li>10月　荒らし鯖になる。
@@ -75,55 +71,32 @@
 <li>4月20日　hain主席不在のためてっちが副主席に任命される
 <li>4月20日　第一回政治局・mod選挙開始
 <li>4月22日　国領がトップの草餅革新党、草深がトップの労働党、てっちがトップの共産党ができる
-  </div>
-</section>
-    <section class="bot">
-  <div class="container">
-    <h2>kusamoti bot紹介</h2>
-    <p>kusamoti Botは、Discord上で様々な機能を提供する多機能Botです。経済、ギャンブル、ランキングなど、多彩なコマンドに対応しています。</p>
-    <ul>
-    
-      <!-- 他のコマンドも必要に応じて -->
     </ul>
-    <img src="https://i.imgur.com/wsGmJPG.jpg" alt="Botスクリーンショット" class="bot-img">
-  </div>
-</section>
-<section class="members">
-  <div class="container">
+  </section>
+
+  <section id="members">
     <h2>幹部一覧</h2>
     <ul>
       <li>主席：hain</li>
       <li>副主席：てっち</li>
-      <li>政治局 | 人民指導部：上にうぇーい、ポッチャマ、、Ausgleich、ホコリン、!poll</li>
+      <li>政治局 | 人民指導部：上にうぇーい、ポッチャマ、Ausgleich、ホコリン、!poll</li>
       <li>情報局 | 人民指導部：ペーと、miznobu、ファイ</li>
-<!-- 必要に応じて追加 -->
-     
     </ul>
-  </div>
-   <div id="ticker-container">
-  <div id="ticker"></div>
-</div>
-</section>
+  </section>
+</main>
 
-
-  </div>
-
-</body>
-  <script>
-const ticker = document.getElementById('ticker');
-
-// GitHubからJSONを取得（キャッシュ防止クエリ付き）
+<script>
 fetch('https://raw.githubusercontent.com/hain-sspc/SSPC/main/data.json?t=' + new Date().getTime())
   .then(response => response.json())
   .then(data => {
-    // announcements 配列からテキストを連結
     const text = data.announcements.map(a => a.message).join('　|　');
-    ticker.textContent = text;
+    document.getElementById('ticker').textContent = text;
   })
-  .catch(error => {
-    console.error('アナウンスの取得に失敗しました:', error);
-    ticker.textContent = '現在アナウンスはありません';
+  .catch(err => {
+    console.error(err);
+    document.getElementById('ticker').textContent = '現在アナウンスはありません';
   });
 </script>
 
+</body>
 </html>
