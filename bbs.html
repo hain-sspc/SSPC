@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>掲示板 - 草餅過激派連合軍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>掲示板</h1>
+    <nav>
+      <a href="index.html">トップ</a> |
+    </nav>
+  </header>
+
+  <main id="bbs">
+    <form id="postForm">
+      <input type="text" id="name" placeholder="名前" required>
+      <textarea id="message" placeholder="メッセージ" required></textarea>
+      <button type="submit">投稿</button>
+    </form>
+    <div id="posts"></div>
+  </main>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <!-- 掲示板ロジック -->
+  <script src="bbs.js"></script>
+</body>
+</html>
