@@ -29,7 +29,7 @@ exports.handler = async function (event, context) {
   try {
     const { username, content } = JSON.parse(event.body);
 
-    const webhookUrl = 'https://discordapp.com/api/webhooks/1380740660637728849/1nYUnAf-v6moGCa3dxtzIAbFeQdOPtzMn_9pbDiyks7Z-F6cKkFvKEFLLr6-An2cXNWO';
+    const webhookUrl = 'https://discordapp.com/api/webhooks/1380789460811387062/rd7cai7YWy56iJ1aQ-8FTsmAf_qNI0JFWDT6PNrwrF31bUdzc3U2lR7ohuhenkC_hMYy';
 
     await axios.post(webhookUrl, {
       username,
