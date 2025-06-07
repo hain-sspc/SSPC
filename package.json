@@ -1,0 +1,16 @@
+{
+  "name": "sspc-homepage-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for SSPC Homepage",
+  "main": "functions/relay-discord.js",
+  "scripts": {
+    "start": "netlify dev"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "license": "MIT"
+}
