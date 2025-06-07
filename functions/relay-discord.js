@@ -73,7 +73,7 @@ exports.handler = async function (event, context) {
     recentPosts.push(now);
     rateLimitMap.set(username, recentPosts);
 
-    const webhookUrl = 'https://discordapp.com/api/webhooks/1375750588083605654/l_P4XJvzC4xRz4ColArAHYCibyZkMUUjDErKVYR8xj0Yp6N8whJCjbF7JG1HSh1O48mg';
+    const webhookUrl = 'https://discordapp.com/api/webhooks/1380812865660911667/3ZsR-Q31nMwgS0_bcZT9rRV2o_WqpQZsaQZAMLUl6QTFjIYaTn3Dmj0Cd3izM5hEkRFZ';
 
     await axios.post(webhookUrl, {
       username,
