@@ -24,11 +24,13 @@
         content: message
       };
 
-      const res = await fetch("https://YOUR-RELAY-FUNCTION-URL", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
+    
+        const res = await fetch("https://sspc-homepage.netlify.app/.netlify/functions/relay-discord", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(payload)
+});
+
 
       document.getElementById("status").innerText = res.ok ? "送信しました！" : "エラーが発生しました";
     });
