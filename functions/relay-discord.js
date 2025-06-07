@@ -11,7 +11,7 @@ exports.handler = async function (event, context) {
   try {
     const { username, content } = JSON.parse(event.body);
 
-    const webhookUrl = 'https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN'; // ここを置き換える
+    const webhookUrl = 'https://discordapp.com/api/webhooks/1380740660637728849/1nYUnAf-v6moGCa3dxtzIAbFeQdOPtzMn_9pbDiyks7Z-F6cKkFvKEFLLr6-An2cXNWO'; // ここを置き換える
 
     await axios.post(webhookUrl, {
       username,
