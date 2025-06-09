@@ -46,7 +46,8 @@
     // 新着メッセージをAPIから取得しチャット画面に追加
     async function loadNewMessages() {
       try {
-     const res = await fetch("https://raw.githubusercontent.com/hain-sspc/SSPC/main/contents/discord_messages.json");
+  const res = await fetch(`https://raw.githubusercontent.com/hain-sspc/SSPC/main/contents/discord_messages.json?nocache=${Date.now()}`);
+
 
         if (!res.ok) throw new Error("履歴取得失敗");
         const data = await res.json();
