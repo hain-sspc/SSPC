@@ -76,7 +76,7 @@
     // 送信処理
     document.getElementById("chatForm").addEventListener("submit", async function (e) {
       e.preventDefault();
-      const username = document.getElementById("username").value.trim();
+      const username = document.getElementById("author").value.trim();
       const message = document.getElementById("message").value.trim();
       if (!username || !message) return;
 
