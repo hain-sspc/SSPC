@@ -36,16 +36,14 @@
 
     // チャット履歴表示用divにメッセージを追加
     function appendChatMessage(msg) {
-      const chatHistoryDiv = document.getElementById("chatHistory");
-      const time = new Date(msg.timestamp).toLocaleTimeString();
-      // 表示のusernameプロパティは msg.author または msg.usernameの可能性があるので両方チェック
-      const user = msg.username || msg.author || "unknown";
-      const content = msg.content || "";
-      const line = `[${time}] ${user}: ${content}`;
-      chatHistoryDiv.innerText += line + "\n";
-      chatHistoryDiv.scrollTop = chatHistoryDiv.scrollHeight; // 常にスクロール
-    }
-
+  const chatHistoryDiv = document.getElementById("chatHistory");
+  const time = new Date(msg.timestamp).toLocaleTimeString();
+  const user = msg.author || msg.username || "unknown";
+  const content = msg.content || "";
+  const line = `[${time}] ${user}: ${content}`;
+  chatHistoryDiv.innerText += line + "\n";
+  chatHistoryDiv.scrollTop = chatHistoryDiv.scrollHeight;
+}
     // 新着メッセージを取得して画面に反映
     async function loadNewMessages() {
       try {
