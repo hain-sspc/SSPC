@@ -31,79 +31,76 @@
   <p id="status"></p>
 
   <script>
-    // 直近に取得したメッセージのタイムスタンプ or IDを保存
+    // 直近に取得したメッセージのタイムスタンプを保持
     let lastMessageTimestamp = 0;
 
     // チャット履歴表示用divにメッセージを追加
     function appendChatMessage(msg) {
       const chatHistoryDiv = document.getElementById("chatHistory");
       const time = new Date(msg.timestamp).toLocaleTimeString();
-      const line = `[${time}] ${msg.username}: ${msg.content}`;
+      // 表示のusernameプロパティは msg.author または msg.usernameの可能性があるので両方チェック
+      const user = msg.username || msg.author || "unknown";
+      const content = msg.content || "";
+      const line = `[${time}] ${user}: ${content}`;
       chatHistoryDiv.innerText += line + "\n";
-      chatHistoryDiv.scrollTop = chatHistoryDiv.scrollHeight; // 常に下までスクロール
+      chatHistoryDiv.scrollTop = chatHistoryDiv.scrollHeight; // 常にスクロール
     }
 
-    // 新着メッセージをAPIから取得しチャット画面に追加
+    // 新着メッセージを取得して画面に反映
     async function loadNewMessages() {
       try {
-  const res = await fetch(`https://raw.githubusercontent.com/hain-sspc/SSPC/main/contents/discord_messages.json?nocache=${Date.now()}`);
-
-
+        const res = await fetch(`https://raw.githubusercontent.com/hain-sspc/SSPC/main/contents/discord_messages.json?nocache=${Date.now()}`);
         if (!res.ok) throw new Error("履歴取得失敗");
         const data = await res.json();
 
-        // lastMessageTimestampより新しいメッセージだけ抽出
+        // lastMessageTimestamp より新しいメッセージだけ取得
         const newMessages = data.filter(m => new Date(m.timestamp).getTime() > lastMessageTimestamp);
 
         newMessages.forEach(msg => {
           appendChatMessage(msg);
-          // タイムスタンプ更新（最新のものを保持）
           const msgTime = new Date(msg.timestamp).getTime();
           if (msgTime > lastMessageTimestamp) lastMessageTimestamp = msgTime;
         });
-
       } catch (e) {
         console.error("新着メッセージ取得エラー:", e);
       }
     }
 
-    // 最初に過去のメッセージを読み込み
+    // 最初に過去メッセージ読み込み
     loadNewMessages();
 
-    // 以降1分ごとに新着を取得
+    // 1分毎に新着取得
     setInterval(loadNewMessages, 60 * 1000);
 
     // 送信処理
-    document.getElementById("chatForm").addEventListener("submit", async function (e) {
+    document.getElementById("chatForm").addEventListener("submit", async (e) => {
       e.preventDefault();
-      const username = document.getElementById("author").value.trim();
+      const author = document.getElementById("author").value.trim();
       const message = document.getElementById("message").value.trim();
-      if (!username || !message) return;
+      if (!author || !message) return;
 
-      const payload = {
-        username: username,
-        content: message
-      };
+      const payload = { username: author, content: message };
 
       try {
         const res = await fetch("https://sspc-homepage.netlify.app/.netlify/functions/relay-discord", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(payload),
         });
 
-        document.getElementById("status").innerText = res.ok ? "送信しました！" : "エラーが発生しました";
+        const statusElem = document.getElementById("status");
         if (res.ok) {
+          statusElem.innerText = "送信しました！";
           document.getElementById("message").value = "";
-          // 送信後すぐに新着を取得して反映
           loadNewMessages();
+        } else {
+          statusElem.innerText = "エラーが発生しました";
         }
-      } catch (e) {
+      } catch (error) {
         document.getElementById("status").innerText = "送信エラー";
-        console.error(e);
+        console.error(error);
       }
     });
   </script>
 </body>
 </html>
-
