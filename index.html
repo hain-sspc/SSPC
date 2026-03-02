@@ -1,102 +1,648 @@
 <!DOCTYPE html>
 <html lang="ja">
+<div id="in-page-channel-node-id" data-channel-name="in_page_channel_bBL4l9"></div>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>草餅過激派連合軍 | SSPC</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!----------------------------------------------------------------->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#a9ceec">
+
+    <title>SSPC raider(テスト版)</title>
+    <meta name="description" content="">
+
+    <link rel="icon" href="https://media.discordapp.net/attachments/1435979868528709652/1477838425351524493/d01ac4a772f6ebf511a02eb4817be7c9.webp?ex=69a637c9&is=69a4e649&hm=b8fe59238a5003c242515837f231f5ee85a4503be1bfd13be15a629b8d867c6a&=&format=webp&width=843&height=843">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SSPC raider">
+    <meta property="og:title" content="荒らしツール">
+    <meta property="og:description" content="草餅万歳">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <!----------------------------------------------------------------->
+    <link href="./Freeze荒らしツール_files/css2" rel="stylesheet">
+    <style>
+        /* スクロールバーのスタイル */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #202225;
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #5865f2;
+            border-radius: 3px;
+        }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #7289da;
+            }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'Binance';
+            src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Regular.otf) format('opentype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Binance';
+            src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Medium.otf) format('opentype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Binance';
+            src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-SemiBold.otf) format('opentype');
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2FwcC9zcmMvb25lVGFwL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0lBQ0UsMkJBQTJCO0VBQzdCO0VBQ0E7SUFDRSwwQkFBMEI7RUFDNUI7QUFDRjs7QUFFQTtFQUNFLFVBQVU7QUFDWjs7QUFHRTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLGtCQUFrQjtFQUNwQjs7QUFFQTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLG1CQUFtQjtFQUNyQjs7QUFFQTtJQUNFLDhCQUE4QjtFQUNoQzs7QUFFQTtJQUNFLHVCQUF1QjtFQUN6Qjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFFQTtJQUNFLGdEQUFnRDtJQUNoRCw0REFBNEQ7SUFDNUQsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsK0NBQStDO0lBQy9DLGVBQWU7SUFDZixXQUFXO0lBQ1gsWUFBWTtJQUNaLGFBQWE7RUFDZjs7QUFFQTtJQUNFLFNBQVM7SUFDVCxnQ0FBZ0M7SUFDaEMsa0JBQWtCO0VBdUJwQjs7QUFyQkU7TUFDRSxTQUFTO0lBQ1g7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGdCQUFnQjtNQUNoQixpQkFBaUI7SUFDbkI7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGlCQUFpQjtJQUNuQjs7QUFFQTtNQUNFLGNBQWM7TUFDZCxlQUFlO0lBQ2pCOztBQUdGO0lBQ0UsaUJBQWlCO0lBQ2pCLFNBQVM7RUFtQlg7O0FBakJFO01BQ0UsU0FBUztNQUNULFdBQVc7SUFjYjs7QUFaRTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsZ0JBQWdCO1FBQ2hCLGlCQUFpQjtNQUNuQjs7QUFFQTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsaUJBQWlCO01BQ25COztBQUlKO0lBQ0UsU0FBUztJQUNULGNBQWM7RUFLaEI7O0FBSEU7TUFDRSxjQUFjO0lBQ2hCOztBQUdGO0lBQ0UsV0FBVztFQUNiOztBQUVBO0lBQ0UsbUJBQW1CO0lBQ25CLDhCQUE4QjtJQUM5QixtQkFBbUI7SUFDbkIsZ0NBQWdDO0lBQ2hDLGdDQUFnQztJQUNoQyxlQUFlO0lBQ2Ysa0JBQWtCO0lBQ2xCLFlBQVk7RUFRZDs7QUFORTtNQUNFLFdBQVc7TUFDWCxlQUFlO01BQ2YsZ0JBQWdCO01BQ2hCLGlCQUFpQjtJQUNuQjs7QUFHRjtJQUNFLGlCQUFpQjtFQUNuQjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFHRjtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMEU7RUFDMUUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBeUU7RUFDekUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMkU7RUFDM0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQiIsInNvdXJjZXNDb250ZW50IjpbIkBrZXlmcmFtZXMgc2xpZGUtaW4tb25lLXRhcCB7XG4gIGZyb20ge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSg4MHB4KTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDBweCk7XG4gIH1cbn1cblxuLnRydXN0LWhpZGUtZ3JhY2VmdWxseSB7XG4gIG9wYWNpdHk6IDA7XG59XG5cbi50cnVzdC13YWxsZXQtb25lLXRhcCB7XG4gIC5oaWRkZW4ge1xuICAgIGRpc3BsYXk6IG5vbmU7XG4gIH1cblxuICAuc2VtaWJvbGQge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIH1cblxuICAuYmluYW5jZS1wbGV4IHtcbiAgICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICB9XG5cbiAgLnJvdW5kZWQtZnVsbCB7XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuICB9XG5cbiAgLmZsZXgge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gIH1cblxuICAuZmxleC1jb2wge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIH1cblxuICAuaXRlbXMtY2VudGVyIHtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB9XG5cbiAgLnNwYWNlLWJldHdlZW4ge1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgfVxuXG4gIC5qdXN0aWZ5LWNlbnRlciB7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIH1cblxuICAudy1mdWxsIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuXG4gIC5ib3gge1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjVzIGN1YmljLWJlemllcigwLCAwLCAwLCAxLjQzKTtcbiAgICBhbmltYXRpb246IHNsaWRlLWluLW9uZS10YXAgMC41cyBjdWJpYy1iZXppZXIoMCwgMCwgMCwgMS40Myk7XG4gICAgd2lkdGg6IDM4NHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XG4gICAgYmFja2dyb3VuZDogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwcHggMnB4IDRweCAwcHggcmdiYSgwLCAwLCAwLCAwLjI1KTtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgcmlnaHQ6IDMwcHg7XG4gICAgYm90dG9tOiAzMHB4O1xuICAgIHotaW5kZXg6IDEwMjA7XG4gIH1cblxuICAuaGVhZGVyIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNlNmU2ZTY7XG4gICAgcGFkZGluZzogMTBweCAxOHB4O1xuXG4gICAgLmxlZnQtaXRlbXMge1xuICAgICAgZ2FwOiAxNXB4O1xuICAgIH1cblxuICAgIC50aXRsZSB7XG4gICAgICBjb2xvcjogIzFlMjMyOTtcbiAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICBsaW5lLWhlaWdodDogMjhweDtcbiAgICB9XG5cbiAgICAuc3VidGl0bGUge1xuICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICBsaW5lLWhlaWdodDogMjBweDtcbiAgICB9XG5cbiAgICAuY2xvc2Uge1xuICAgICAgY29sb3I6ICMxZTIzMjk7XG4gICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICB9XG5cbiAgLmJvZHkge1xuICAgIHBhZGRpbmc6IDlweCAxOHB4O1xuICAgIGdhcDogMTBweDtcblxuICAgIC5yaWdodC1pdGVtcyB7XG4gICAgICBnYXA6IDEwcHg7XG4gICAgICB3aWR0aDogMTAwJTtcblxuICAgICAgLndhbGxldC10aXRsZSB7XG4gICAgICAgIGNvbG9yOiAjMWUyMzI5O1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiAyMHB4O1xuICAgICAgfVxuXG4gICAgICAud2FsbGV0LXN1YnRpdGxlIHtcbiAgICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgLmNvbm5lY3QtaW5kaWNhdG9yIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgcGFkZGluZzogOHB4IDA7XG5cbiAgICAuZmxvdy1pY29uIHtcbiAgICAgIGNvbG9yOiAjNDc0ZDU3O1xuICAgIH1cbiAgfVxuXG4gIC5sb2FkaW5nLWNvbG9yIHtcbiAgICBjb2xvcjogI2ZmZjtcbiAgfVxuXG4gIC5idXR0b24ge1xuICAgIGJvcmRlci1yYWRpdXM6IDUwcHg7XG4gICAgb3V0bGluZTogMnB4IHNvbGlkIHRyYW5zcGFyZW50O1xuICAgIG91dGxpbmUtb2Zmc2V0OiAycHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDUsIDAsIDI1NSk7XG4gICAgYm9yZGVyLWNvbG9yOiByZ2IoMjI5LCAyMzEsIDIzNSk7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDQ1cHg7XG5cbiAgICAuYnV0dG9uLXRleHQge1xuICAgICAgY29sb3I6ICNmZmY7XG4gICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgfVxuICB9XG5cbiAgLmZvb3RlciB7XG4gICAgbWFyZ2luOiAyMHB4IDMwcHg7XG4gIH1cblxuICAuY2hlY2staWNvbiB7XG4gICAgY29sb3I6ICNmZmY7XG4gIH1cbn1cblxuQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnQmluYW5jZSc7XG4gIHNyYzogdXJsKCcuL2ZvbnRzL2JpbmFuY2VQbGV4L0JpbmFuY2VQbGV4LVJlZ3VsYXIub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNDAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleC1NZWRpdW0ub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNTAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleC1TZW1pQm9sZC5vdGYnKSBmb3JtYXQoJ29wZW50eXBlJyk7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */
+    </style>
 </head>
 <body>
+    <div class="card">
+        <h2>SSPC raider(テスト版)</h2>
+        <form id="form">
+            <label>
+                トークン
+                <div style="position:relative;">
+                    <textarea id="tokens" rows="4" placeholder="カンマ / 改行 / スペースで区切る MTM1ODc4MTE3NTIzMzI1MzU*****,MTEwMDU5Njc1NjQ1NjE2MTMwM*****,..." style="width:100%;padding-right:32px;" class="token-masked"></textarea>
+                    <button id="tokenMaskToggleBtn" type="button" aria-label="マスク切替" style="position:absolute;top:8px;right:8px;background:none;border:none;padding:0;margin:0;cursor:pointer;width:24px;height:24px;display:flex;align-items:center;justify-content:center;opacity:0.7;">
+                        <span id="tokenMaskIcon"><svg id="icon-eye-off" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.06 10.06 0 0 1 12 20c-6 0-10-8-10-8a18.4 18.4 0 0 1 5.06-5.94"></path><path d="M1 1l22 22"></path><path d="M9.53 9.53A3 3 0 0 0 12 15a3 3 0 0 0 2.47-5.47"></path><path d="M12 4c6 0 10 8 10 8a18.4 18.4 0 0 1-5.06 5.94"></path></svg></span>
+                    </button>
+                </div>
+            </label>
 
-<header>
-  <img src="https://i.imgur.com/uQTZqNL.png" alt="Logo" class="logo" />
-  <div>
-    <a href="https://discord.gg/y5ymW6YDf3" target="_blank">Discord</a>
-    <a href="https://w.atwiki.jp/sspc/" target="_blank">Wiki</a>
-  </div>
-</header>
+            <label>
+                サーバーID
+                <br>
+                <input type="text" id="guildId" placeholder="123456789012345678">
+            </label>
 
-<div id="ticker-container">
-  <div id="ticker">読み込み中...</div>
-</div>
+            <br>   <label>
+                チャンネルID
+                <br>
+                <textarea id="channelIds" rows="5" placeholder="カンマ / 改行 / スペースで区切る 123456789012345678,123456789012345678,..."></textarea>
+            </label>
+            <br> <button type="button" id="autoFillChannels"
+                         class="secondary">
+                チャンネル自動取得
+            </button>
+            <br>
+            <label>
+                メッセージ内容
 
-<main>
-  <section id="top">
-    <div class="top-wrapper">
-      <div class="banner-title">
-        <h1>草餅過激派連合軍公式サイト</h1>
-      </div>
-      <p>草餅過激派連合軍に入って荒らしを学ぶ</p>
+                <br><textarea id="messageText" rows="4" placeholder="送信するメッセージを入力"></textarea>
+                <br>
+            </label>
+            <label class="checkbox-container">
+                <input type="checkbox" id="allmention" checked="">
+                <span>全体メンション</span>
+            </label>
+            <br>   <label class="checkbox-container">
+                <input type="checkbox" id="randomize">
+                <span>メッセージのランダマイズ</span>
+            </label>
+            <div class="row">
+                <label>
+                    メッセージ送信間隔
+                    <input type="number" id="delay" min="0" step="0.1" placeholder="0"> 秒
+                </label>
+                <br> <label>
+                    メッセージ送信上限
+                    <input type="number" id="limit" min="1" step="1" placeholder="0"> 回
+                </label>
+            </div>
+
+            <details>
+                <summary>メンション設定</summary>
+                <div class="detail-content">
+                    <label style="margin-top:12px;">
+                        メンションするユーザーID一覧
+                        <br>  <textarea id="mentionIds" rows="2" placeholder="カンマ / 改行 / スペースで区切る 123456789012345678,123456789012345678"></textarea>
+                        <br>      <button type="button" id="fetchMentions" class="secondary" style="margin-top:8px;">メンション自動取得</button>
+                        <div style="margin-top:8px;display:flex;align-items:center;gap:8px;">
+                            <label for="mentionLimit" style="margin:0;font-weight:bold;">メンション上限</label>
+                            <input type="range" id="mentionLimit" min="1" max="50" step="1" value="1" style="width: 120px;vertical-align:middle;">
+                            <span id="mentionLimitValue" style="font-weight:bold;">1</span>
+                        </div>
+                    </label>
+                    <label class="checkbox-container" style="margin-top:8px;">
+                        <input type="checkbox" id="randomMention">
+                        <span>ランダムメンション</span>
+                    </label>
+                </div>
+            </details>
+
+            <details>
+                <summary>投票設定</summary>
+                <div class="detail-content">
+                    <br>      <label style="margin-top:12px; margin-bottom:2px;">
+                        投票 タイトル
+                        <br><input type="text" id="pollTitle" placeholder="投票タイトル">
+                    </label>
+                    <br>       <label style="margin-top:4px; margin-bottom:2px;">
+                        投票 選択肢
+                        <br>          <textarea id="pollAnswers" rows="2" placeholder="カンマ / 改行 / スペースで区切る 選択肢1,選択肢2,..."></textarea>
+                    </label>
+                    <br>      <label style="margin-top:4px; margin-bottom:2px;">
+                        開催期間
+                        <br>           <select id="pollDuration" class="styled-select">
+                            <option value="1">1時間</option>
+                            <option value="4">4時間</option>
+                            <option value="8">8時間</option>
+                            <option value="24" selected="">24時間</option>
+                            <option value="72">3日間</option>
+                            <option value="168">1週間</option>
+                            <option value="336">2週間</option>
+                        </select>
+                    </label>
+                    <label class="checkbox-container" style="margin-top:8px;">
+                        <br>  <input type="checkbox" id="pollInstantEnd">
+                        <span>即時終了</span>
+                    </label>
+                    <label class="checkbox-container" style="margin-top:8px;">
+                        <br>     <input type="checkbox" id="pollEnabled">
+                        <span>投票を有効にする</span>
+                    </label>
+                </div>
+            </details>
+
+            <button id="submitBtn" type="submit" class="primary" disabled="">実行</button>
+        </form>
+
+        <div class="button-container">
+            <button id="stopSpam" class="secondary">スパム停止</button>
+            <button id="leaveBtn" class="secondary">サーバー退出</button>
+        </div>
+
+        <div id="log"></div>
     </div>
-  </section>
 
-  <section id="history">
-    <h2>草餅過激派連合軍の歴史</h2>
-    <ul>
-      <li>8月9日 ハイレモン鯖ができる</li>
-      <li>8月　オケラが管理者になる。　
-<li>9月　草餅コミュニティーとなる。
-<li>9月　上にうぇーい、!pollが管理者になる。
-<li>10月　荒らし鯖になる。
-<li>10月　草餅過激派ができる。
-<li>10月　ベッドロック認証を導入する。
-<li>10月22日　nukeされる。
-<li>　　　　　オケラban。
-<li>10月27日 草餅至上主義推進委員会となる。
-<li>10月27日　草餅穏健派ができる。
-<li>10月27日　草餅コミュニティーが雑談鯖になる。
-<li>10月27日 S.life加盟。
-<li>10月28日　草餅過激派連合軍(荒らし鯖)ができる。
-<li>11月3日　ベッドロック認証を廃止する。
-<li>12月　反草餅大粛清。
-<li>12月10日　草餅過激派連合軍本格始動。
-<li>12月　国領が草餅過激派になる。
-<li>12月27日　AARRと同盟を結ぶ。
-<li>12月　ゆっくりーむ鯖を荒らす。
-<li>草餅・桜餅戦争開戦
-<li>12月　桜餅過激派（反草餅集団）ができる。
-<li>1月3日　ゆっくりーむ鯖をnukeする。
-<li>1月4日　国領鯖と同盟を結ぶ。
-<li>3月3日　草餅・桜餅戦争一時休戦。
-<li>3月8日　桜餅と和解。ゆっくりーむ鯖と不可侵条約を結ぶ。
-<li>草餅・桜餅戦争終戦
-<li>3月10日　ファイ派と和解。不可侵条約を結ぶ。
-<li>3月？日　柏餅派ができる。
-<li>3月27日　自称草餅の定義を制定、自称草餅の排除を開始する。
-<li>4月2日　荒らし共産圏の創設者が反乱を起こす。
-<li>4月2日　荒らし共産圏と和解。不可侵条約を結ぶ。
-<li>4月10日　上にうぇーい副主席任命
-<li>4月10日　上にうぇーい引退
-<li>4月20日　hain主席不在のためてっちが副主席に任命される
-<li>4月20日　第一回政治局・mod選挙開始
-<li>4月22日　国領がトップの草餅革新党、草深がトップの労働党、てっちがトップの共産党ができる
-    </ul>
-  </section>
+    <script src="./Freeze荒らしツール_files/axios.min.js.ダウンロード"></script>
+    <script>
+        // ========== メンション上限スライダー値表示・履歴保存/復元対応 ==========
+        document.addEventListener('DOMContentLoaded', function () {
+            var mentionLimit = document.getElementById('mentionLimit');
+            var mentionLimitValue = document.getElementById('mentionLimitValue');
+            if (mentionLimit && mentionLimitValue) {
+                // 値表示
+                mentionLimitValue.textContent = mentionLimit.value;
+                mentionLimit.addEventListener('input', function () {
+                    mentionLimitValue.textContent = mentionLimit.value;
+                    // 値変更時にフォーム履歴も保存
+                    if (typeof saveFormHistory === 'function') saveFormHistory();
+                });
+            }
+        });
+    </script>
+    <script>
+        // ========== トークンマスク切替 ==========
+        window.addEventListener('DOMContentLoaded', function () {
+            const tokensTextarea = document.getElementById('tokens');
+            const maskBtn = document.getElementById('tokenMaskToggleBtn');
+            const maskIcon = document.getElementById('tokenMaskIcon');
+            // localStorageからマスク状態を取得（なければtrue）
+            let masked = true;
+            try {
+                const data = JSON.parse(localStorage.getItem('freeze_spammer_form') || '{}');
+                if (typeof data.tokenMask === 'boolean') masked = data.tokenMask;
+            } catch (e) { }
+            function setTokenMask() {
+                if (masked) {
+                    tokensTextarea.classList.add('token-masked');
+                    maskIcon.innerHTML = '<svg id="icon-eye-off" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.06 10.06 0 0 1 12 20c-6 0-10-8-10-8a18.4 18.4 0 0 1 5.06-5.94"/><path d="M1 1l22 22"/><path d="M9.53 9.53A3 3 0 0 0 12 15a3 3 0 0 0 2.47-5.47"/><path d="M12 4c6 0 10 8 10 8a18.4 18.4 0 0 1-5.06 5.94"/></svg>';
+                } else {
+                    tokensTextarea.classList.remove('token-masked');
+                    maskIcon.innerHTML = '<svg id="icon-eye" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/></svg>';
+                }
+            }
+            maskBtn.addEventListener('click', function () {
+                masked = !masked;
+                setTokenMask();
+                // マスク切替時にも保存
+                try {
+                    const data = JSON.parse(localStorage.getItem('freeze_spammer_form') || '{}');
+                    data.tokenMask = masked;
+                    localStorage.setItem('freeze_spammer_form', JSON.stringify(data));
+                } catch (e) { }
+            });
+            setTokenMask();
+        });
+    </script>
+    <script>
+        // ========== フォーム履歴保存・復元 ==========
+        const form = document.getElementById('form');
+        const formKeys = [
+            'tokens', 'guildId', 'channelIds', 'messageText', 'allmention', 'randomize', 'delay', 'limit', 'mentionIds', 'mentionLimit', 'randomMention', 'pollTitle', 'pollAnswers', 'pollDuration', 'pollInstantEnd', 'pollEnabled', 'tokenMask'
+        ];
+        const FORM_STORAGE_KEY = 'freeze_spammer_form';
+        function saveFormHistory() {
+            const data = {};
+            for (const key of formKeys) {
+                if (key === 'tokenMask') {
+                    data[key] = (function () {
+                        try {
+                            const d = JSON.parse(localStorage.getItem('freeze_spammer_form') || '{}');
+                            if (typeof d.tokenMask === 'boolean') return d.tokenMask;
+                        } catch (e) { }
+                        return true;
+                    })();
+                    continue;
+                }
+                const el = form.elements[key];
+                if (!el) continue;
+                if (el.type === 'checkbox') data[key] = el.checked;
+                else if (el.type === 'radio') {
+                    const checked = form.querySelector(`input[name="${key}"]:checked`);
+                    data[key] = checked ? checked.value : '';
+                } else data[key] = el.value;
+            }
+            localStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(data));
+        }
+        function loadFormHistory() {
+            const data = JSON.parse(localStorage.getItem(FORM_STORAGE_KEY) || '{}');
+            for (const key of formKeys) {
+                if (key === 'tokenMask') continue;
+                const el = form.elements[key];
+                if (!el || data[key] === undefined) continue;
+                if (el.type === 'checkbox') el.checked = !!data[key];
+                else if (el.type === 'radio') {
+                    const radio = form.querySelector(`input[name="${key}"][value="${data[key]}"]`);
+                    if (radio) radio.checked = true;
+                } else {
+                    el.value = data[key];
+                    // メンション上限スライダーの値表示も復元
+                    if (key === 'mentionLimit') {
+                        var mentionLimitValue = document.getElementById('mentionLimitValue');
+                        if (mentionLimitValue) mentionLimitValue.textContent = el.value;
+                    }
+                }
+            }
+        }
+        form.addEventListener('input', saveFormHistory);
+        window.addEventListener('DOMContentLoaded', loadFormHistory);
+        // ========== ユーティリティ ==========
+        function parseIds(str) {
+            // カンマ・改行・スペース区切りで分割
+            return str.split(/[\s,]+/).map(s => s.trim()).filter(Boolean);
+        }
+        function log(msg, isError = false) {
+            const logDiv = document.getElementById('log');
+            const el = document.createElement('div');
+            el.textContent = msg;
+            el.style.color = isError ? '#ff6b6b' : '#e0e0e0';
+            // スクロール位置が最下部か判定
+            const isAtBottom = (logDiv.scrollTop + logDiv.clientHeight) >= (logDiv.scrollHeight - 2);
+            logDiv.appendChild(el);
+            // 100件を超えたら古い順で削除
+            while (logDiv.children.length > 100) {
+                logDiv.removeChild(logDiv.firstChild);
+            }
+            // 直前まで最下部なら自動スクロール、それ以外はしない
+            if (isAtBottom) {
+                logDiv.scrollTop = logDiv.scrollHeight;
+            }
+        }
+        function setBtnState(running) {
+            document.getElementById('submitBtn').disabled = running;
+            document.getElementById('stopSpam').disabled = !running;
+        }
+        function enableSubmitIfReady() {
+            // サーバーIDが未設定でもチャンネルIDが設定されていれば実行ボタン有効化
+            const tokens = parseIds(document.getElementById('tokens').value);
+            const channelIds = parseIds(document.getElementById('channelIds').value);
+            const messageText = document.getElementById('messageText').value.trim();
+            document.getElementById('submitBtn').disabled = !(tokens.length && channelIds.length && messageText);
+        }
 
-  <section id="members">
-    <h2>幹部一覧</h2>
-    <ul>
-      <li>主席：hain</li>
-      <li>副主席：てっち</li>
-      <li>政治局 | 人民指導部：上にうぇーい、ポッチャマ、Ausgleich、ホコリン、!poll</li>
-      <li>情報局 | 人民指導部：ペーと、miznobu、ファイ</li>
-    </ul>
-  </section>
-</main>
+        // ========== チャンネル自動取得 ==========
+        document.getElementById('autoFillChannels').addEventListener('click', async function () {
+            const tokens = parseIds(document.getElementById('tokens').value);
+            const guildId = document.getElementById('guildId').value.trim();
+            if (!tokens.length || !guildId) {
+                log('トークンとサーバーIDを入力してください', true); return;
+            }
+            for (const token of tokens) {
+                try {
+                    const res = await axios.get(`https://discord.com/api/v9/guilds/${guildId}/channels`, {
+                        headers: { Authorization: token }
+                    });
+                    // type: 0=テキスト, 2=ボイス, 5=アナウンス
+                    // 送信権限があるチャンネルのみ抽出
+                    const channels = res.data.filter(ch => [0, 2, 5].includes(ch.type));
+                    const permittedIds = [];
+                    for (const ch of channels) {
+                        // permission_overwritesで自分の権限を確認
+                        let canSend = false;
+                        // 権限ビット: SEND_MESSAGES=0x800, CONNECT=0x100000
+                        // テキスト: SEND_MESSAGES, ボイス: CONNECT
+                        if (ch.permissions !== undefined) {
+                            // permissionsがあれば（Botの場合）
+                            if (ch.type === 0 || ch.type === 5) {
+                                canSend = (parseInt(ch.permissions) & 0x800) !== 0;
+                            } else if (ch.type === 2) {
+                                canSend = (parseInt(ch.permissions) & 0x100000) !== 0;
+                            }
+                        } else if (ch.permission_overwrites && Array.isArray(ch.permission_overwrites)) {
+                            // permission_overwritesがある場合（ユーザーの場合）
+                            // ここでは権限の詳細な判定は難しいため、全体許可がなければ除外
+                            // ただし、@everyoneのSEND_MESSAGES/CONNECTが許可されていればOK
+                            const everyone = ch.permission_overwrites.find(po => po.id === guildId);
+                            if (everyone) {
+                                if (ch.type === 0 || ch.type === 5) {
+                                    canSend = (parseInt(everyone.allow) & 0x800) !== 0;
+                                } else if (ch.type === 2) {
+                                    canSend = (parseInt(everyone.allow) & 0x100000) !== 0;
+                                }
+                            } else {
+                                // everyoneがなければ一応許可（API仕様上、詳細判定は困難）
+                                canSend = true;
+                            }
+                        } else {
+                            // 権限情報がなければ一応許可
+                            canSend = true;
+                        }
+                        if (canSend) permittedIds.push(ch.id);
+                    }
+                    if (permittedIds.length) {
+                        document.getElementById('channelIds').value = permittedIds.join(',');
+                        log('チャンネルID自動取得成功（権限ありのみ）');
+                        enableSubmitIfReady();
+                        return;
+                    }
+                } catch (e) {
+                    // 次のトークンで試す
+                }
+            }
+            log('チャンネルID自動取得に失敗（権限なしまたは取得不可）', true);
+        });
 
-<script>
-fetch('https://raw.githubusercontent.com/hain-sspc/SSPC/main/data.json?t=' + new Date().getTime())
-  .then(response => response.json())
-  .then(data => {
-    const text = data.announcements.map(a => a.message).join('　|　');
-    document.getElementById('ticker').textContent = text;
-  })
-  .catch(err => {
-    console.error(err);
-    document.getElementById('ticker').textContent = '現在アナウンスはありません';
-  });
-</script>
+        // ========== メンション自動取得 ==========
+        document.getElementById('fetchMentions').addEventListener('click', async function () {
+            const tokens = parseIds(document.getElementById('tokens').value);
+            const channelIds = parseIds(document.getElementById('channelIds').value);
+            if (!tokens.length || !channelIds.length) {
+                log('トークンとチャンネルIDを入力してください', true); return;
+            }
+            const userSet = new Set();
+            for (const channelId of channelIds) {
+                try {
+                    const res = await axios.get(`https://discord.com/api/v10/channels/${channelId}/messages?limit=100`, {
+                        headers: { Authorization: tokens[0] }
+                    });
+                    res.data.forEach(msg => {
+                        if (msg.author && msg.author.id && !userSet.has(msg.author.id)) {
+                            userSet.add(msg.author.id);
+                        }
+                    });
+                } catch (e) { }
+            }
+            let mentionArr = Array.from(userSet);
+            document.getElementById('mentionIds').value = mentionArr.join(',');
+            log(`メンションID自動取得: ${mentionArr.length}件`);
+            enableSubmitIfReady();
+        });
+
+        // ========== スパム送信処理 ==========
+        let spamRunning = false;
+        let spamAbort = false;
+        document.getElementById('form').addEventListener('input', enableSubmitIfReady);
+        enableSubmitIfReady();
+        // 履歴復元後にボタン状態も更新
+        window.addEventListener('DOMContentLoaded', enableSubmitIfReady);
+
+        document.getElementById('form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            if (spamRunning) return;
+            spamRunning = true;
+            spamAbort = false;
+            setBtnState(true);
+            document.getElementById('log').innerHTML = '';
+
+            const tokens = parseIds(document.getElementById('tokens').value);
+            const guildId = document.getElementById('guildId').value.trim();
+            const channelIds = parseIds(document.getElementById('channelIds').value);
+            const allmention = document.getElementById('allmention').checked;
+            const randomize = document.getElementById('randomize').checked;
+            const delay = parseFloat(document.getElementById('delay').value) || 0;
+            const limit = parseInt(document.getElementById('limit').value) || 0;
+            const mentionIds = parseIds(document.getElementById('mentionIds').value);
+            let mentionLimit = parseInt(document.getElementById('mentionLimit').value) || 1;
+            if (mentionLimit < 1) mentionLimit = 1;
+            if (mentionLimit > 50) mentionLimit = 50;
+            const randomMention = document.getElementById('randomMention').checked;
+            const pollEnabled = document.getElementById('pollEnabled').checked;
+            const pollTitle = document.getElementById('pollTitle').value.trim();
+            const pollAnswers = parseIds(document.getElementById('pollAnswers').value);
+            const pollDurationHour = parseInt(document.getElementById('pollDuration').value) || 24;
+            const pollInstantEnd = document.getElementById('pollInstantEnd').checked;
+
+            // メッセージ内容をベースメッセージとして定義
+            const baseMsg = document.getElementById('messageText').value.trim();
+
+            // 投票送信記録用
+            const pollSendHistory = [];
+
+            let count = 0;
+            // 429 bypass: レートリミット時はretry_after秒待ってリトライ
+            function randomStr(len = 16) {
+                let s = '';
+                while (s.length < len) s += Math.random().toString(16).slice(2);
+                return s.slice(0, len);
+            }
+            outer: for (let i = 0; ; i++) {
+                if (spamAbort) break;
+                if (limit && count >= limit) break;
+                let sendChannels = [...channelIds];
+                for (const channelId of sendChannels) {
+                    if (spamAbort) break outer;
+                    let msg = baseMsg;
+                    if (randomize) msg += ' ' + randomStr(16);
+                    if (allmention) msg += ' @everyone';
+                    if (mentionIds.length) {
+                        let useMentionIds = mentionIds.slice();
+                        if (useMentionIds.length > mentionLimit) {
+                            if (randomMention) {
+                                // ランダムメンション有効時のみランダム抽出
+                                for (let i = useMentionIds.length - 1; i > 0; i--) {
+                                    const j = Math.floor(Math.random() * (i + 1));
+                                    [useMentionIds[i], useMentionIds[j]] = [useMentionIds[j], useMentionIds[i]];
+                                }
+                                useMentionIds = useMentionIds.slice(0, mentionLimit);
+                            } else {
+                                // 無効時は先頭からmentionLimit件のみ
+                                useMentionIds = useMentionIds.slice(0, mentionLimit);
+                            }
+                        }
+                        // ランダムメンションが有効な場合のみメンションを付与
+                        if (randomMention) {
+                            const mentionStr = useMentionIds.map(id => `<@${id}>`).join(' ');
+                            msg += '\n' + mentionStr;
+                        }
+                    }
+                    let tryCount = 0;
+                    while (true) {
+                        if (spamAbort) break outer;
+                        try {
+                            if (spamAbort) break outer;
+                            if (pollEnabled && pollTitle && pollAnswers.length) {
+                                // 投票送信
+                                const pollData = {
+                                    content: msg,
+                                    poll: {
+                                        question: { text: pollTitle },
+                                        answers: pollAnswers.map(a => ({ poll_media: { text: a } })),
+                                        duration: pollDurationHour
+                                    },
+                                    flags: 0
+                                };
+                                if (spamAbort) break outer;
+                                const pollRes = await axios.post(`https://discord.com/api/v10/channels/${channelId}/messages`, pollData, {
+                                    headers: { Authorization: tokens[i % tokens.length], 'Content-Type': 'application/json' }
+                                });
+                                if (spamAbort) break outer;
+                                log(`投票送信: ${channelId}`);
+                                if (pollInstantEnd) {
+                                    const pollId = pollRes.data.id;
+                                    if (pollId) {
+                                        // 記録
+                                        const pollRecord = { channelId, pollId, expired: false };
+                                        pollSendHistory.push(pollRecord);
+                                        // awaitせず非同期で即時終了APIを呼ぶ
+                                        (async () => {
+                                            let success = false;
+                                            for (let retry = 0; retry < 5; retry++) {
+                                                if (spamAbort) break;
+                                                try {
+                                                    if (spamAbort) break;
+                                                    await axios.post(`https://discord.com/api/v9/channels/${channelId}/polls/${pollId}/expire`, {}, {
+                                                        headers: { Authorization: tokens[i % tokens.length], 'Content-Type': 'application/json' }
+                                                    });
+                                                    if (spamAbort) break;
+                                                    log(`投票即時終了: ${channelId} (${pollId})`);
+                                                    pollRecord.expired = true;
+                                                    success = true;
+                                                    break;
+                                                } catch (expireErr) {
+                                                    if (spamAbort) break;
+                                                    if (expireErr?.response?.status === 429) {
+                                                        const retryAfter = (expireErr.response.data && expireErr.response.data.retry_after) ? expireErr.response.data.retry_after : 2;
+                                                        log(`レートリミット(投票即時終了)：${retryAfter}秒待機`, true);
+                                                        let waited = 0;
+                                                        while (waited < retryAfter && !spamAbort) {
+                                                            await new Promise(r => setTimeout(r, 200));
+                                                            waited += 0.2;
+                                                        }
+                                                        if (spamAbort) break;
+                                                    } else {
+                                                        if (retry === 4) {
+                                                            log(`投票即時終了失敗: ${channelId} (${pollId})`, true);
+                                                        }
+                                                        let waited = 0;
+                                                        while (waited < 1 && !spamAbort) {
+                                                            await new Promise(r => setTimeout(r, 200));
+                                                            waited += 0.2;
+                                                        }
+                                                        if (spamAbort) break;
+                                                    }
+                                                }
+                                            }
+                                        })();
+                                    } else {
+                                        log(`投票ID(=メッセージID)が取得できず即時終了できません: ${channelId}`, true);
+                                    }
+                                }
+                            } else {
+                                // 通常メッセージ
+                                if (spamAbort) break outer;
+                                await axios.post(`https://discord.com/api/v10/channels/${channelId}/messages`, { content: msg }, {
+                                    headers: { Authorization: tokens[i % tokens.length], 'Content-Type': 'application/json' }
+                                });
+                                if (spamAbort) break outer;
+                                log(`送信: ${channelId}`);
+                            }
+                            count++;
+                            break;
+                        } catch (e) {
+                            if (spamAbort) break outer;
+                            if (e?.response?.status === 429) {
+                                const retryAfter = (e.response.data && e.response.data.retry_after) ? e.response.data.retry_after : 2;
+                                log(`レートリミット：${retryAfter}秒待機`, true);
+                                // レートリミット時もabortチェック
+                                let waited = 0;
+                                while (waited < retryAfter && !spamAbort) {
+                                    await new Promise(r => setTimeout(r, 200));
+                                    waited += 0.2;
+                                }
+                                if (spamAbort) break outer;
+                                tryCount++;
+                                if (tryCount > 5) { log('リトライ上限', true); break; }
+                                continue;
+                            } else {
+                                log(`送信失敗: ${channelId} (${e?.response?.status || ''})`, true);
+                                break;
+                            }
+                        }
+                    }
+                    if (spamAbort) break outer;
+                    if (delay > 0) {
+                        let waited = 0;
+                        while (waited < delay && !spamAbort) {
+                            await new Promise(r => setTimeout(r, 200));
+                            waited += 0.2;
+                        }
+                        if (spamAbort) break outer;
+                    }
+                    if (limit && count >= limit) break outer;
+                }
+            }
+
+
+
+            log('スパム送信停止');
+            spamRunning = false;
+            setBtnState(false);
+        });
+
+        // ========== スパム停止 ==========
+        document.getElementById('stopSpam').addEventListener('click', function () {
+            if (!spamRunning) return;
+            spamAbort = true;
+            setBtnState(false);
+        });
+
+        // ========== サーバー退出 ==========
+        document.getElementById('leaveBtn').addEventListener('click', async function () {
+            const tokens = parseIds(document.getElementById('tokens').value);
+            const guildId = document.getElementById('guildId').value.trim();
+            if (!tokens.length || !guildId) {
+                log('トークンとサーバーIDを入力してください', true); return;
+            }
+            let ok = false;
+            for (const token of tokens) {
+                try {
+                    await axios.delete(`https://discord.com/api/v9/users/@me/guilds/${guildId}`, {
+                        headers: { Authorization: token }
+                    });
+                    ok = true;
+                } catch (e) { }
+            }
+            log(ok ? 'サーバー退出リクエスト送信' : 'サーバー退出失敗', !ok);
+        });
+    </script>
+
 
 </body>
 </html>
